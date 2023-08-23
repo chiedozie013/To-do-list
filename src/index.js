@@ -1,27 +1,27 @@
-import "./style.css";
+import './style.css';
 
-const list = document.querySelector(".to-do-list");
+const list = document.querySelector('.to-do-list');
 
 const toDoList = [
   {
     index: 1,
-    desc: "Washing dishes",
+    desc: 'Washing dishes',
     completed: false,
   },
   {
     index: 2,
-    desc: "Doing laundry",
+    desc: 'Doing laundry',
     completed: false,
   },
   {
     index: 3,
-    desc: "Shopping",
+    desc: 'Shopping',
     completed: false,
   },
 ];
 
 const getList = function () {
-  list.innerHTML = "";
+  list.innerHTML = '';
   toDoList.forEach((item) => {
     list.innerHTML += ` 
          <li>
@@ -36,4 +36,4 @@ const getList = function () {
   });
 };
 
-window.addEventListener("load", getList);
+window.addEventListener('load', getList);
