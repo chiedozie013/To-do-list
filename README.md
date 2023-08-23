@@ -37,13 +37,13 @@ In this project, I built a simple HTML list of To Do tasks. This simple web page
 
 ### Key Features <a name="key-features"></a>
 
-- **[it has a mobile and desktop version]**
+- **[it has a desktop version]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [https://chiedozie013.github.oi/](https://github.com/chiedozie013/Awesome-Books)
+- [https://chiedozie013.github.oi/](https://chiedozie013.github.io/To-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,8 +88,7 @@ Install this project with:
 
 # 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Contact form]**
-- [ ] **[join page to register]**
+- [ ] **[To do list section]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
