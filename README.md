@@ -43,7 +43,7 @@ In this project, I built a simple HTML list of To Do tasks. This simple web page
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [https://chiedozie013.github.oi/](https://chiedozie013.github.io/To-do-list/)
+- [https://chiedozie013.github.oi/](https://chiedozie013.github.io/To-do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
