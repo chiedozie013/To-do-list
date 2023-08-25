@@ -2,6 +2,7 @@ const list = document.querySelector('.to-do-list');
 const addText = document.querySelector('.to-do-add-text');
 const form = document.querySelector('.form');
 const enterBtn = document.querySelector('.enter-btn');
+const clearBtn = document.querySelector('.to-do-clear');
 
 const wholeList = function () {
   let getStorage = JSON.parse(localStorage.getItem('list')) || [];
@@ -86,6 +87,49 @@ const wholeList = function () {
     if (!target) return;
     editList(target);
   });
+
+  // Function to check box
+  list.addEventListener('change', (e) => {
+    const target = e.target.closest('.to-do-input');
+    const text = e.target.nextElementSibling;
+    const targetID = Number(e.target.id);
+
+    if (!target) return;
+    if (target.checked) {
+      text.style.textDecoration = 'line-through';
+      getStorage[targetID].completed = true;
+      setStorage();
+    } else {
+      text.style.textDecoration = 'none';
+      getStorage[targetID].completed = false;
+      setStorage();
+    }
+  });
+
+  const domLoaded = () => {
+    const text = document.querySelectorAll('.to-do-text');
+    const checkbox = [...document.querySelectorAll('.to-do-input')];
+    getStorage.forEach((item, i) => {
+      if (item.completed === true) {
+        checkbox[i].checked = true;
+        text[i].style.textDecoration = 'line-through';
+      }
+    });
+  };
+
+  window.addEventListener('DOMContentLoaded', domLoaded);
+
+  // Function to delete all completed tasks.
+  const delBtn = () => {
+    getStorage = getStorage.filter((item) => item.completed === false);
+    getStorage.forEach((item, i) => {
+      item.index = i + 1;
+    });
+    setStorage();
+    displayList();
+  };
+
+  clearBtn.addEventListener('click', delBtn);
 
   displayList();
 };
