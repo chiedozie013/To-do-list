@@ -14,12 +14,12 @@ describe("to add function", () => {
     </div>
     <div class="to-do-add">
       <form class="form">
-        // <input
-        //   value="test"
-        //   type="text"
-        //   class="to-do-add-text"
-        //   placeholder="Add to your list..."
-        // />
+        <input
+          value="test"
+          type="text"
+          class="to-do-add-text"
+          placeholder="Add to your list..."
+        />
       </form>
       <i class="fas fa-rotate-90 enter-btn">&#xf3be;</i>
     </div>
