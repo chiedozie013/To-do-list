@@ -28,12 +28,12 @@ describe("to add function", () => {
   <button class="to-do-clear">Clear all completed</button>
 </div>`;
 
-  //   test('should add first task', () => {
-  //     const task = document.getElementsByClassName('to-do-text');
-  //     addList('learn code');
-  //     expect(task.length).toBe(1);
-  //     expect(task[0].textContent).toBe('learn code');
-  //   });
+    test('should add first task', () => {
+      const task = document.getElementsByClassName('to-do-text');
+      addList('learn code');
+      expect(task.length).toBe(1);
+      expect(task[0].textContent).toBe('learn code');
+    });
   test("should add second task", () => {
     const task = document.getElementsByClassName("to-do-text");
     addList("complete task");
