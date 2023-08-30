@@ -40,10 +40,10 @@ describe("to add function", () => {
     expect(task.length).toBe(2);
     expect(task[1].textContent).toBe("complete task");
   });
-  //   test('should remove first task', () => {
-  //     const task = document.getElementsByClassName('to-do-text');
-  //     removeListIndex('1');
-  //     expect(task.length).toBe(1);
-  //     expect(task[0].textContent).toBe('complete task');
-  //   });
+    test('should remove first task', () => {
+      const task = document.getElementsByClassName('to-do-text');
+      removeListIndex('1');
+      expect(task.length).toBe(1);
+      expect(task[0].textContent).toBe('complete task');
+    });
 });
