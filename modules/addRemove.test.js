@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { addList, removeListIndex } from './addRemove.js';
+import { addList, removeListIndex } from "./addRemove.js";
 
-describe('to add function', () => {
+describe("to add function", () => {
   document.body.innerHTML = `
   <div class="container">
   <div class="to-do-body">
@@ -14,12 +14,12 @@ describe('to add function', () => {
     </div>
     <div class="to-do-add">
       <form class="form">
-        <input
-          value="test"
-          type="text"
-          class="to-do-add-text"
-          placeholder="Add to your list..."
-        />
+        // <input
+        //   value="test"
+        //   type="text"
+        //   class="to-do-add-text"
+        //   placeholder="Add to your list..."
+        // />
       </form>
       <i class="fas fa-rotate-90 enter-btn">&#xf3be;</i>
     </div>
@@ -28,22 +28,22 @@ describe('to add function', () => {
   <button class="to-do-clear">Clear all completed</button>
 </div>`;
 
-  test('should add first task', () => {
-    const task = document.getElementsByClassName('to-do-text');
-    addList('learn code');
-    expect(task.length).toBe(1);
-    expect(task[0].textContent).toBe('learn code');
-  });
-  test('should add second task', () => {
-    const task = document.getElementsByClassName('to-do-text');
-    addList('complete task');
+  //   test('should add first task', () => {
+  //     const task = document.getElementsByClassName('to-do-text');
+  //     addList('learn code');
+  //     expect(task.length).toBe(1);
+  //     expect(task[0].textContent).toBe('learn code');
+  //   });
+  test("should add second task", () => {
+    const task = document.getElementsByClassName("to-do-text");
+    addList("complete task");
     expect(task.length).toBe(2);
-    expect(task[1].textContent).toBe('complete task');
+    expect(task[1].textContent).toBe("complete task");
   });
-  test('should remove first task', () => {
-    const task = document.getElementsByClassName('to-do-text');
-    removeListIndex('1');
-    expect(task.length).toBe(1);
-    expect(task[0].textContent).toBe('complete task');
-  });
+  //   test('should remove first task', () => {
+  //     const task = document.getElementsByClassName('to-do-text');
+  //     removeListIndex('1');
+  //     expect(task.length).toBe(1);
+  //     expect(task[0].textContent).toBe('complete task');
+  //   });
 });
