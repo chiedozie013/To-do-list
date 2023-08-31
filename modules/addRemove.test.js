@@ -8,9 +8,9 @@ import {
   delBtn,
   checkComplete,
   getLocalStorage,
-} from "./addRemove";
+} from './addRemove';
 
-describe("todoAdder", () => {
+describe('todoAdder', () => {
   document.body.innerHTML = `
   <div class="container">
   <div class="to-do-body">
@@ -35,44 +35,43 @@ describe("todoAdder", () => {
   <button class="to-do-clear">Clear all completed</button>
 </div>`;
 
-  test("todoAdder", () => {
-    const task = document.getElementsByClassName("to-do-text");
-    getList("learn code");
+  test('todoAdder', () => {
+    const task = document.getElementsByClassName('to-do-text');
+    getList('learn code');
     expect(task.length).toBe(1);
-    expect(task[0].textContent).toBe("learn code");
+    expect(task[0].textContent).toBe('learn code');
   });
 
-  test("todoAdder", () => {
-    const task = document.getElementsByClassName("to-do-text");
-    getList("complete task");
+  test('todoAdder', () => {
+    const task = document.getElementsByClassName('to-do-text');
+    getList('complete task');
     expect(task.length).toBe(2);
-    expect(task[1].textContent).toBe("complete task");
+    expect(task[1].textContent).toBe('complete task');
   });
 
-  test("remove task", () => {
-    const task = document.getElementsByClassName("to-do-text");
-    removeListIndex("1");
+  test('remove task', () => {
+    const task = document.getElementsByClassName('to-do-text');
+    removeListIndex('1');
     expect(task.length).toBe(1);
-    expect(task[0].textContent).toBe("complete task");
+    expect(task[0].textContent).toBe('complete task');
   });
 
-  test("edit task", () => {
-    const editedTask = document.getElementsByClassName("remove-list");
+  test('edit task', () => {
+    const editedTask = document.getElementsByClassName('remove-list');
     editList(editedTask[0]);
 
-    const bgColorSet =
-      editedTask[0].parentElement.parentElement.classList.contains("bg-color");
+    const bgColorSet = editedTask[0].parentElement.parentElement.classList.contains('bg-color');
 
     expect(bgColorSet).toBe(true);
   });
 
-  test("check task", () => {
-    const uniqueTarget = document.getElementsByClassName("to-do-text");
+  test('check task', () => {
+    const uniqueTarget = document.getElementsByClassName('to-do-text');
     const target = uniqueTarget[0];
     const targetID = 0;
     target.checked = true;
     const text = {
-      style: { textDecoration: "none" },
+      style: { textDecoration: 'none' },
     };
 
     checkComplete(target, text, targetID);
@@ -80,7 +79,7 @@ describe("todoAdder", () => {
     expect(getStorage[0].completed).toBe(true);
   });
 
-  test("clear", () => {
+  test('clear', () => {
     delBtn();
 
     const getStorage = getLocalStorage();
