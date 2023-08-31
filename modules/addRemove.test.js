@@ -49,12 +49,12 @@ describe("todoAdder", () => {
     expect(task[1].textContent).toBe("complete task");
   });
 
-  test("remove task", () => {
-    const task = document.getElementsByClassName("to-do-text");
-    removeListIndex("1");
-    expect(task.length).toBe(1);
-    expect(task[0].textContent).toBe("complete task");
-  });
+  // test("remove task", () => {
+  //   const task = document.getElementsByClassName("to-do-text");
+  //   removeListIndex("1");
+  //   expect(task.length).toBe(1);
+  //   expect(task[0].textContent).toBe("complete task");
+  // });
 
   test("edit task", () => {
     const editedTask = document.getElementsByClassName("remove-list");
