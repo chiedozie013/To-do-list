@@ -42,12 +42,12 @@ describe('todoAdder', () => {
     expect(task[0].textContent).toBe('learn code');
   });
 
-  // test('todoAdder', () => {
-  //   const task = document.getElementsByClassName('to-do-text');
-  //   getList('complete task');
-  //   expect(task.length).toBe(2);
-  //   expect(task[1].textContent).toBe('complete task');
-  // });
+  test('todoAdder', () => {
+    const task = document.getElementsByClassName('to-do-text');
+    getList('complete task');
+    expect(task.length).toBe(2);
+    expect(task[1].textContent).toBe('complete task');
+  });
 
   test('remove task', () => {
     const task = document.getElementsByClassName('to-do-text');
