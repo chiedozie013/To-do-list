@@ -56,14 +56,14 @@ describe('todoAdder', () => {
     expect(task[0].textContent).toBe('complete task');
   });
 
-  // test('edit task', () => {
-  //   const editedTask = document.getElementsByClassName('remove-list');
-  //   editList(editedTask[0]);
+  test('edit task', () => {
+    const editedTask = document.getElementsByClassName('remove-list');
+    editList(editedTask[0]);
 
-  //   const bgColorSet = editedTask[0].parentElement.parentElement.classList.contains('bg-color');
+    const bgColorSet = editedTask[0].parentElement.parentElement.classList.contains('bg-color');
 
-  //   expect(bgColorSet).toBe(true);
-  // });
+    expect(bgColorSet).toBe(true);
+  });
 
   test('check task', () => {
     const uniqueTarget = document.getElementsByClassName('to-do-text');
