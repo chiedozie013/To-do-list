@@ -74,10 +74,10 @@ describe('todoAdder', () => {
       style: { textDecoration: 'none' },
     };
 
-  //   checkComplete(target, text, targetID);
-  //   const getStorage = getLocalStorage();
-  //   expect(getStorage[0].completed).toBe(true);
-  // });
+    checkComplete(target, text, targetID);
+    const getStorage = getLocalStorage();
+    expect(getStorage[0].completed).toBe(true);
+  });
 
   test('clear', () => {
     delBtn();
